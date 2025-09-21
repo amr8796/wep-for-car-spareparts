@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات والطلبات -  دليل تجار قطع الغيار في اليمن</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">شعار الموقع</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                             <a class="nav-link" href="index.html">الرئيسية</a> </li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="about.html">من نحن</a>
+                     </li>
+                        <li class="nav-item">
+                              <a class="nav-link active" href="servicses.html">الخدمات والطلبات</a> </li>
+                        <li class="nav-item">
+                              <a class="nav-link" href="contact.html">تواصل معنا</a>
+                        </li>
+                       </ul>
+                     
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="login.html" class="btn btn-outline-primary me-2">تسجيل الدخول</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="register.html" class="btn btn-primary">إنشاء حساب</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </header>
+
+ <main>
+    <section class="page-header text-center text-white bg-dark py-5">
+        <div class="container">
+            <h1 class="display-4">اطلب قطعتك بسهولة</h1>
+            <p class="lead">املأ النموذج التالي وسيقوم فريقنا بالبحث عن أفضل سعر لك.</p>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card p-4 shadow-sm">
+                    <h2 class="text-center mb-4">نموذج طلب قطعة</h2>
+                    <form id="requestForm">
+                        <div class="mb-3">
+                            <label for="partName" class="form-label">اسم القطعة المطلوبة*</label>
+                            <input type="text" class="form-control" id="partName" placeholder="مثال: مساعد أمامي يسار - كامري 2018" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="partImage" class="form-label">ارفع صورة للقطعة (اختياري)</label>
+                            <input class="form-control" type="file" id="partImage" accept="image/*">
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">الاسم الكامل*</label>
+                            <input type="text" class="form-control" id="customerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerPhone" class="form-label">رقم الهاتف*</label>
+                            <input type="tel" class="form-control" id="customerPhone" required>
+                        </div>
+                         <div class="mb-3">
+                            <label for="customerCity" class="form-label">المدينة*</label>
+                            <select class="form-select" id="customerCity" required>
+                                <option selected disabled value="">اختر مدينتك...</option>
+                                <option>صنعاء</option>
+                                <option>عدن</option>
+                                <option>حضرموت</option>
+                                <option>عمران</option>
+                                <option>أبين</option>
+                                <option>الضالع</option>
+                                <option>البيضاء</option>
+                                <option>الحديدة</option>
+                                <option>الجوف</option>
+                                <option>المهرة</option>
+                                <option>المحويت</option>
+                                <option>أمانة العاصمة</option>
+                                <option>ذمار</option>
+                                <option>حجة</option>
+                                <option>إب</option>
+                                <option>لحج</option>
+                                <option>مأرب</option>
+                                <option>ريمة</option>
+                                <option>صعدة</option>
+                                <option>شبوة</option>
+                                <option>تعز</option>
+                                <option>سقطرى</option>
+                            </select>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">إرسال الطلب</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">خدماتنا الأخرى</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-search fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">البحث عن القطع</h5>
+                        <p class="card-text">نبحث لك في شبكة واسعة من التجار الموثوقين لنجد لك ما تريد.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                 <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-shipping-fast fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">التوصيل والشحن</h5>
+                        <p class="card-text">نوفر خدمة توصيل سريعة وآمنة لجميع مدن الجمهورية اليمنية.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                 <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">الوساطة وحل النزاعات</h5>
+                        <p class="card-text">نضمن حقك كوسيط موثوق بينك وبين التاجر.</p>
+                        <button id="ajaxModalBtn" class="btn btn-outline-primary mt-3">اعرف المزيد</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2025</p>
+           <div class="social-icons">
+    <a href="https://www.facebook.com/Mechanical.Engineer.yemen/#" target="_blank" rel="noopener noreferrer" class="text-white me-3">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com/your-sm_vu" target="_blank" rel="noopener noreferrer" class="text-white me-3">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://wa.me/967777775281" target="_blank" rel="noopener noreferrer" class="text-white">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script src="js/script.js"></script>
+<div class="modal fade" id="resultModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">تم استلام طلبك بنجاح</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>اسم الطلب:</strong> <span id="modalPartName"></span></p>
+        <p><strong>صورة الطلب:</strong></p>
+        <img id="modalPartImage" src="" class="img-fluid rounded mb-3" alt="صورة القطعة">
+        <p><strong>رقم التتبع:</strong> <span id="modalTrackingNumber" class="fw-bold"></span></p>
+        <hr>
+        <p>سيتم التواصل معك قريبًا من قبل فريقنا.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ajaxModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ajaxModalTitle">تفاصيل الخدمة</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="ajaxModalBody">
+        <p>جاري تحميل البيانات...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

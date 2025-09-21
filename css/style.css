@@ -1,0 +1,75 @@
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    height: 80vh; /* ارتفاع القسم يمثل 80% من ارتفاع الشاشة */
+    background-image: url('../images/hero-background.jpg'); /* مسار الصورة */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* يجعل الخلفية ثابتة عند التمرير */
+}
+
+/* طبقة لونية داكنة فوق صورة الخلفية لتوضيح النص */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* اللون الأسود بشفافية 60% */
+}
+
+/* للتأكد من أن المحتوى يظهر فوق الطبقة الداكنة */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+/* Swiper Slider Styling */
+.swiper {
+    width: 100%;
+    height: 500px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* =================================================================
+   Responsive Media Queries (للتصميم المتجاوب)
+================================================================= */
+
+/* نطبق هذه الأنماط فقط على الشاشات التي يقل عرضها عن 768 بكسل (حجم الأجهزة اللوحية والجوالات) */
+@media (max-width: 767px) {
+
+    /* 1. تعديل قسم الـ Hero في الصفحة الرئيسية */
+    .hero-section h1 {
+        font-size: 2.5rem; /* Bootstrap's default is 4.5rem for display-4 */
+        font-weight: bold;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    /* 2. تعديل ارتفاع السلايدر في الصفحة الرئيسية */
+    .swiper {
+        height: 300px; /* تقليل ارتفاع السلايدر ليتناسب مع الجوال */
+    }
+
+    /* 3. تعديل حجم خط العناوين في الصفحات الداخلية */
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+}
